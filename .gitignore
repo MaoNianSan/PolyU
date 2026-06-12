@@ -1,0 +1,32 @@
+# stagev2 local data and generated artifacts
+/stagev2/**/input/
+/stagev2/**/output/
+/stagev2/**/cache/
+/stagev2/**/*.joblib
+/stagev2/**/*.pkl
+/stagev2/**/*.pickle
+/stagev2/**/*.zip
+
+# stagev2 secrets
+/stagev2/**/.env
+/stagev2/**/.env.*
+!/stagev2/**/.env.example
+
+# stagev2 Python
+/stagev2/**/__pycache__/
+/stagev2/**/*.py[cod]
+/stagev2/**/*$py.class
+/stagev2/**/.pytest_cache/
+/stagev2/**/.mypy_cache/
+/stagev2/**/.ruff_cache/
+/stagev2/**/.venv/
+/stagev2/**/venv/
+
+# stagev2 notebooks
+/stagev2/**/.ipynb_checkpoints/
+
+# stagev2 OS / editor
+/stagev2/**/.DS_Store
+/stagev2/**/Thumbs.db
+/stagev2/**/.vscode/
+/stagev2/**/.idea/
