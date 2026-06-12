@@ -1,7 +1,4 @@
-# stagev2 local data and generated artifacts
-/stagev2/**/input/
-/stagev2/**/output/
-/stagev2/**/cache/
+# stagev2 local data and generated artif/stagev2/**/cache/
 /stagev2/**/*.joblib
 /stagev2/**/*.pkl
 /stagev2/**/*.pickle

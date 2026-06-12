@@ -1,0 +1,19 @@
+early_variant,model_name,raw_feature_block,scale_feature_block,raw_external_accuracy,scale_external_accuracy,scale_gain_delta,scale_has_gain
+earlyv0,Linear SVM,early_middle,early_middle_scale,0.676056338028169,0.6901408450704225,0.014084507042253502,True
+earlyv0,Linear SVM,middle_late,middle_late_scale,0.704225352112676,0.5774647887323944,-0.12676056338028163,False
+earlyv0,Linear SVM,all,all_plus_interactions,0.6619718309859155,0.6619718309859155,0.0,False
+earlyv0,Logistic Regression,early_middle,early_middle_scale,0.6619718309859155,0.676056338028169,0.014084507042253502,True
+earlyv0,Logistic Regression,middle_late,middle_late_scale,0.704225352112676,0.647887323943662,-0.05633802816901401,False
+earlyv0,Logistic Regression,all,all_plus_interactions,0.676056338028169,0.676056338028169,0.0,False
+earlyv0,RBF SVM,early_middle,early_middle_scale,0.676056338028169,0.676056338028169,0.0,False
+earlyv0,RBF SVM,middle_late,middle_late_scale,0.6197183098591549,0.6056338028169014,-0.014084507042253502,False
+earlyv0,RBF SVM,all,all_plus_interactions,0.704225352112676,0.6197183098591549,-0.08450704225352113,False
+earlyv1,Linear SVM,early_middle,early_middle_scale,0.676056338028169,0.6901408450704225,0.014084507042253502,True
+earlyv1,Linear SVM,middle_late,middle_late_scale,0.704225352112676,0.5774647887323944,-0.12676056338028163,False
+earlyv1,Linear SVM,all,all_plus_interactions,0.6619718309859155,0.676056338028169,0.014084507042253502,True
+earlyv1,Logistic Regression,early_middle,early_middle_scale,0.6619718309859155,0.676056338028169,0.014084507042253502,True
+earlyv1,Logistic Regression,middle_late,middle_late_scale,0.704225352112676,0.647887323943662,-0.05633802816901401,False
+earlyv1,Logistic Regression,all,all_plus_interactions,0.676056338028169,0.676056338028169,0.0,False
+earlyv1,RBF SVM,early_middle,early_middle_scale,0.676056338028169,0.676056338028169,0.0,False
+earlyv1,RBF SVM,middle_late,middle_late_scale,0.6197183098591549,0.6056338028169014,-0.014084507042253502,False
+earlyv1,RBF SVM,all,all_plus_interactions,0.704225352112676,0.6338028169014085,-0.07042253521126751,False

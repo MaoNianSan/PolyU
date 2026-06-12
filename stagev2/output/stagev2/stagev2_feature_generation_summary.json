@@ -1,0 +1,65 @@
+{
+  "source_info": {
+    "data_source_mode": "raw_directory",
+    "raw_input_dir": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\input\\raw",
+    "historical_outputs_reused": "False"
+  },
+  "early": {
+    "feature_family": "early_bm25",
+    "feature_version": "early_v5_mild_sensitive",
+    "input_dir": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\input\\raw",
+    "preprocess_dir": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\preprocess",
+    "historical_outputs_reused": false,
+    "ad_file": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\early_bm25\\early_v5_mild_sensitive\\ad_BM25.csv",
+    "ad_n_rows": 87,
+    "ad_n_cols": 76,
+    "control_file": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\early_bm25\\early_v5_mild_sensitive\\control_BM25.csv",
+    "control_n_rows": 79,
+    "control_n_cols": 76,
+    "test_file": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\early_bm25\\early_v5_mild_sensitive\\test_BM25.csv",
+    "test_n_rows": 71,
+    "test_n_cols": 76
+  },
+  "middle": {
+    "model": "bge-m3",
+    "base_url": "https://api.modelarts-maas.com/v1",
+    "new_cache_rows": 4839,
+    "datasets": {
+      "ad": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\embedding\\ad_embedding.csv",
+        "rows": 1635
+      },
+      "control": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\embedding\\control_embedding.csv",
+        "rows": 1818
+      },
+      "test": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\embedding\\test_embedding.csv",
+        "rows": 1386
+      }
+    }
+  },
+  "late": {
+    "model": "qwen3-235b-a22b",
+    "base_url": "https://api.modelarts-maas.com/v1",
+    "new_cache_rows": 237,
+    "datasets": {
+      "ad": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\llm\\ad_LLM.csv",
+        "rows": 87,
+        "masked_text_leakage_row_count": 12
+      },
+      "control": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\llm\\control_LLM.csv",
+        "rows": 79,
+        "masked_text_leakage_row_count": 13
+      },
+      "test": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev2\\output\\stagev2\\features\\llm\\test_LLM.csv",
+        "rows": 71,
+        "masked_text_leakage_row_count": 7
+      }
+    }
+  },
+  "historical_outputs_reused": false
+}

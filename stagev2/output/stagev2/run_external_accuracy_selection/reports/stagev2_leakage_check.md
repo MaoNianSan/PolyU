@@ -1,0 +1,11 @@
+- standard_scaler_inside_pipeline: True
+- imputer_inside_pipeline: True
+- stage_scores_inner_oof: True
+- mlp_svc_late_inner_oof: True
+- external_accuracy_used_for_model_selection: True
+- external_set_role: held-out external validation, not unbiased final test
+- mmse_used_as_input_feature: False
+- tfidf_used: False
+- rbf_svm_used: True
+- historical_outputs_reused: False
+- run_seconds: 1837.0372025966644
