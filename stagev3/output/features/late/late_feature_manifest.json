@@ -1,0 +1,20 @@
+{
+  "feature_family": "late_llm_content_masked_expressive_form",
+  "regenerated_from_raw_text": true,
+  "historical_feature_outputs_reused": false,
+  "api_logic_source": "stage2_equivalent_rewrite",
+  "api_or_cache_mode_counts": {
+    "api": 237
+  },
+  "feature_load_mode": "extracted_this_run",
+  "feature_extracted_this_run": true,
+  "local_surrogate_allowed": false,
+  "cache_path": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev3_fixed\\output\\cache\\huawei_llm_late_feature_cache.csv",
+  "new_cache_rows": 237,
+  "removed_surrogate_cache_rows": 0,
+  "safety_masked_api_calls": 0,
+  "n_train_rows": 166,
+  "n_external_rows": 71,
+  "n_late_features": 13,
+  "v2_derived_form_features_added": true
+}

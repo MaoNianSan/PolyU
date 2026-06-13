@@ -27,3 +27,34 @@
 /stagev2/**/Thumbs.db
 /stagev2/**/.vscode/
 /stagev2/**/.idea/
+
+# stagev3 local data and generated artifacts
+/stagev3/**/cache/
+/stagev3/**/*.joblib
+/stagev3/**/*.pkl
+/stagev3/**/*.pickle
+/stagev3/**/*.zip
+
+# stagev3 secrets
+/stagev3/**/.env
+/stagev3/**/.env.*
+!/stagev3/**/.env.example
+
+# stagev3 Python
+/stagev3/**/__pycache__/
+/stagev3/**/*.py[cod]
+/stagev3/**/*$py.class
+/stagev3/**/.pytest_cache/
+/stagev3/**/.mypy_cache/
+/stagev3/**/.ruff_cache/
+/stagev3/**/.venv/
+/stagev3/**/venv/
+
+# stagev3 notebooks
+/stagev3/**/.ipynb_checkpoints/
+
+# stagev3 OS / editor
+/stagev3/**/.DS_Store
+/stagev3/**/Thumbs.db
+/stagev3/**/.vscode/
+/stagev3/**/.idea/

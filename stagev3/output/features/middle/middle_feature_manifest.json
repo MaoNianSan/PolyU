@@ -1,0 +1,33 @@
+{
+  "feature_family": "middle_huawei_bge_m3_window_embedding",
+  "feature_schema": "v2_full_mean",
+  "middle_keep_dims": 1024,
+  "middle_include_v3_stats": false,
+  "regenerated_from_raw_text": true,
+  "historical_feature_outputs_reused": false,
+  "api_logic_source": "stagev2_cache_first_logic_v3_wrapper",
+  "windowing_source": "stagev2_regex_word_windows",
+  "api_or_cache_mode": "api",
+  "feature_load_mode": "extracted_this_run",
+  "feature_extracted_this_run": true,
+  "local_surrogate_allowed": false,
+  "cache_path": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev3_fixed\\output\\cache\\huawei_bge_m3_embedding_cache.csv",
+  "new_cache_rows": 4839,
+  "unique_texts": 4839,
+  "ignored_surrogate_cache_rows": 0,
+  "accepted_cache_sources": [
+    "api",
+    "huawei_maas_api",
+    "huawei_maas_api_v2"
+  ],
+  "safety_masked_api_calls": 19,
+  "safety_level_counts": {
+    "safety_mask": 9,
+    "aggressive_mask": 8,
+    "neutral_length": 2
+  },
+  "stagev2_cache_compatible": true,
+  "n_train_rows": 166,
+  "n_external_rows": 71,
+  "n_middle_features": 1025
+}

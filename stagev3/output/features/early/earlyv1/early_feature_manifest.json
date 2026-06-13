@@ -1,0 +1,15 @@
+{
+  "feature_family": "early_v5_mild_sensitive_v2compat",
+  "early_variant": "earlyv1",
+  "regenerated_from_raw_text": true,
+  "historical_feature_outputs_reused": false,
+  "feature_load_mode": "extracted_this_run",
+  "feature_extracted_this_run": true,
+  "token_count_model_input": false,
+  "early_content_efficiency_added": true,
+  "n_train_rows": 166,
+  "n_external_rows": 71,
+  "n_features_total_including_audit": 69,
+  "n_model_input_features": 62,
+  "unit_source": "stagev2 OLD10 + EXPANDED + RELATION"
+}
