@@ -11,8 +11,8 @@
   "feature_load_mode": "extracted_this_run",
   "feature_extracted_this_run": true,
   "local_surrogate_allowed": false,
-  "cache_path": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev3_fixed\\output\\cache\\huawei_bge_m3_embedding_cache.csv",
-  "new_cache_rows": 4839,
+  "cache_path": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev3\\output\\cache\\huawei_bge_m3_embedding_cache.csv",
+  "new_cache_rows": 4635,
   "unique_texts": 4839,
   "ignored_surrogate_cache_rows": 0,
   "accepted_cache_sources": [
@@ -20,11 +20,10 @@
     "huawei_maas_api",
     "huawei_maas_api_v2"
   ],
-  "safety_masked_api_calls": 19,
+  "safety_masked_api_calls": 11,
   "safety_level_counts": {
-    "safety_mask": 9,
-    "aggressive_mask": 8,
-    "neutral_length": 2
+    "safety_mask": 8,
+    "aggressive_mask": 3
   },
   "stagev2_cache_compatible": true,
   "n_train_rows": 166,

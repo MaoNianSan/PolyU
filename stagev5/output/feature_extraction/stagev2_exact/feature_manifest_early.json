@@ -1,0 +1,16 @@
+{
+  "feature_family": "early_bm25",
+  "feature_version": "early_v5_mild_sensitive",
+  "input_dir": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\input\\raw",
+  "preprocess_dir": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\preprocess",
+  "historical_outputs_reused": false,
+  "ad_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\early_bm25\\early_v5_mild_sensitive\\ad_BM25.csv",
+  "ad_n_rows": 87,
+  "ad_n_cols": 76,
+  "control_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\early_bm25\\early_v5_mild_sensitive\\control_BM25.csv",
+  "control_n_rows": 79,
+  "control_n_cols": 76,
+  "test_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\early_bm25\\early_v5_mild_sensitive\\test_BM25.csv",
+  "test_n_rows": 71,
+  "test_n_cols": 76
+}

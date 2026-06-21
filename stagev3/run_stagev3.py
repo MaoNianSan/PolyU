@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
-from joblib import Parallel, delayed, parallel_config
+from joblib import Parallel, cpu_count, delayed, parallel_config
 from tqdm.auto import tqdm
 
 from src import config
@@ -57,6 +57,16 @@ def parse_seeds(text: str | None, default: list[int]) -> list[int]:
     return [int(value.strip()) for value in text.split(",") if value.strip()]
 
 
+def automatic_worker_count(task_count: int) -> int:
+    if task_count < 1:
+        return 0
+    try:
+        available_cores = cpu_count(only_physical_cores=True)
+    except TypeError:
+        available_cores = cpu_count()
+    return min(task_count, max(1, available_cores - 1))
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run the stagev3 pipeline.")
     parser.add_argument(
@@ -75,7 +85,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--diagnose-middle-cache", action="store_true", help="Report middle cache coverage and exit without API calls.")
     parser.add_argument("--middle-only", action="store_true", help="Run preprocessing, early features, and middle feature/cache extraction only.")
     parser.add_argument("--min-external-accuracy", type=float, default=0.75)
-    parser.add_argument("--n-jobs", type=int, default=8, help="Parallel selected-stability seeds.")
     parser.add_argument(
         "--resume",
         action=argparse.BooleanOptionalAction,
@@ -203,8 +212,6 @@ def _diagnose_middle_cache(args: argparse.Namespace) -> int:
 
 def _run_pipeline(args: argparse.Namespace, api_key: str) -> None:
     config.ensure_dirs()
-    if args.n_jobs < 1:
-        raise RuntimeError("--n-jobs must be at least 1.")
     stability_seeds = parse_seeds(
         args.seeds,
         config.DEFAULT_STABILITY_SEEDS
@@ -218,6 +225,7 @@ def _run_pipeline(args: argparse.Namespace, api_key: str) -> None:
     checkpoint_dir = selected_paths["checkpoint_dir"]
     completed_seed_ids: list[int] = []
     missing_seed_ids: list[int] = list(stability_seeds)
+    worker_count = 0
     main_results_path = config.FINAL_REPORT_DIR / "seed2026_main_results.csv"
     if args.mode == "selected_after_seed2026":
         if args.force_features:
@@ -254,7 +262,7 @@ def _run_pipeline(args: argparse.Namespace, api_key: str) -> None:
     progress = RunProgress(args.mode, args.cv_mode, stability_seeds, len(selected_df))
     if args.mode == "selected_after_seed2026":
         progress.update(
-            n_jobs=args.n_jobs,
+            worker_count=worker_count,
             resume=args.resume,
             force_rerun=args.force_rerun,
             checkpoint_dir=str(checkpoint_dir),
@@ -518,7 +526,8 @@ def _run_pipeline(args: argparse.Namespace, api_key: str) -> None:
                     "min_external_accuracy": args.min_external_accuracy,
                     "seeds": stability_seeds,
                     "n_seeds": len(stability_seeds),
-                    "n_jobs": args.n_jobs,
+                    "worker_count": worker_count,
+                    "worker_policy": "automatic_physical_cores_minus_one",
                     "resume": args.resume,
                     "force_rerun": args.force_rerun,
                     "selected_model_count": len(selected_df),
@@ -550,6 +559,10 @@ def _run_pipeline(args: argparse.Namespace, api_key: str) -> None:
                     else list(missing_seed_ids)
                 )
                 if seeds_to_run:
+                    worker_count = automatic_worker_count(len(seeds_to_run))
+                    print(f"Automatic worker count: {worker_count}")
+                    progress.update(worker_count=worker_count)
+                    update_selected_manifest(completed_seed_ids, missing_seed_ids)
                     jobs = (
                         delayed(run_selected_seed_checkpoint)(
                             seed,
@@ -564,7 +577,7 @@ def _run_pipeline(args: argparse.Namespace, api_key: str) -> None:
                         for seed in seeds_to_run
                     )
                     parallel = Parallel(
-                        n_jobs=min(args.n_jobs, len(seeds_to_run)),
+                        n_jobs=worker_count,
                         backend="loky",
                         return_as="generator_unordered",
                     )

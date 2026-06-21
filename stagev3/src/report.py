@@ -115,7 +115,7 @@ def write_notebook(path: Path) -> None:
 
     run_command = (
         "python run_stagev3.py --mode selected_after_seed2026 --seeds 0-29 "
-        "--cv-mode exact --min-external-accuracy 0.75 --n-jobs 8 --resume"
+        "--cv-mode exact --min-external-accuracy 0.75 --resume"
     )
     nb = {
         "cells": [
@@ -207,7 +207,7 @@ status = pd.DataFrame([{{
     "row_count_matches": len(results) == expected_rows if expected_rows else False,
     "completed_seed_count": manifest.get("completed_seed_count"),
     "missing_seed_ids": manifest.get("missing_seed_ids"),
-    "n_jobs": manifest.get("n_jobs"),
+    "worker_count": manifest.get("worker_count"),
 }}])
 display(status)
 if summary.empty or results.empty:

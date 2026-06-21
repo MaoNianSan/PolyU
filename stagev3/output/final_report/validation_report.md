@@ -6,16 +6,8 @@
 - PASS: model registry count = 102
 - PASS: early variants = 2
 - PASS: token_count is excluded from model input
-- PASS: selected output models_csv exists
-- PASS: selected output models_md exists
-- PASS: selected output results_csv exists
-- PASS: selected output summary_csv exists
-- PASS: selected output summary_md exists
-- PASS: selected output manifest exists
-- PASS: selected stability rows = 16
-- PASS: selected stability model combinations unique
-- PASS: selected summary rows = 8
-- PASS: selected stability CI fields
+- PASS: seed2026_main_results.csv exists
+- PASS: main results rows = 204
 - PASS: stagev3_summary.md exists
 - PASS: run_manifest.json exists
 - PASS: run_progress.json exists

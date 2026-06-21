@@ -174,8 +174,9 @@ by `early_variant + model_spec_id`; models are not reselected within individual
 seeds. Valid files under `output/features/` are reused under the normal feature
 extraction and API/cache policy.
 
-The selected mode defaults to `--n-jobs 8 --resume`. Each completed seed is
-saved under:
+The selected mode automatically uses up to the detected physical CPU core count
+minus one, capped by the number of pending seeds, and defaults to `--resume`.
+Each completed seed is saved under:
 
 ```text
 output/final_report/selected_stability_checkpoints_external075/seed_000.csv

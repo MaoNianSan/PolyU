@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+joblib
+scipy
+matplotlib
+tabulate
+requests
+python-dotenv
+tqdm
+ipykernel
+nbformat
+nbconvert
+jupyter

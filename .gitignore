@@ -1,60 +1,62 @@
-# stagev2 local data and generated artif/stagev2/**/cache/
+# Secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.venv/
+**/venv/
+**/env/
+
+# Notebooks
+**/.ipynb_checkpoints/
+
+# OS / editor
+**/.DS_Store
+**/Thumbs.db
+**/.vscode/
+**/.idea/
+
+# Logs
+**/*.log
+!/stagev5/runlogs/.gitkeep
+
+# Local data and generated artifacts
+/stagev2/**/cache/
 /stagev2/**/*.joblib
 /stagev2/**/*.pkl
 /stagev2/**/*.pickle
 /stagev2/**/*.zip
 
-# stagev2 secrets
-/stagev2/**/.env
-/stagev2/**/.env.*
-!/stagev2/**/.env.example
-
-# stagev2 Python
-/stagev2/**/__pycache__/
-/stagev2/**/*.py[cod]
-/stagev2/**/*$py.class
-/stagev2/**/.pytest_cache/
-/stagev2/**/.mypy_cache/
-/stagev2/**/.ruff_cache/
-/stagev2/**/.venv/
-/stagev2/**/venv/
-
-# stagev2 notebooks
-/stagev2/**/.ipynb_checkpoints/
-
-# stagev2 OS / editor
-/stagev2/**/.DS_Store
-/stagev2/**/Thumbs.db
-/stagev2/**/.vscode/
-/stagev2/**/.idea/
-
-# stagev3 local data and generated artifacts
 /stagev3/**/cache/
 /stagev3/**/*.joblib
 /stagev3/**/*.pkl
 /stagev3/**/*.pickle
 /stagev3/**/*.zip
 
-# stagev3 secrets
-/stagev3/**/.env
-/stagev3/**/.env.*
-!/stagev3/**/.env.example
+/stagev5/**/cache/
+/stagev5/**/*.joblib
+/stagev5/**/*.pkl
+/stagev5/**/*.pickle
+/stagev5/**/*.zip
+/stagev5/output/feature_extraction/stagev4_unmasked/cache/
+/stagev5/output/run_external_accuracy_selection/models/
+/stagev5/output/run_external_accuracy_selection/logs/
+/stagev5/output/run_external_accuracy_selection/tmp/
+/stagev5/output/stagev5/models/
+/stagev5/output/stagev5/tmp/
 
-# stagev3 Python
-/stagev3/**/__pycache__/
-/stagev3/**/*.py[cod]
-/stagev3/**/*$py.class
-/stagev3/**/.pytest_cache/
-/stagev3/**/.mypy_cache/
-/stagev3/**/.ruff_cache/
-/stagev3/**/.venv/
-/stagev3/**/venv/
-
-# stagev3 notebooks
-/stagev3/**/.ipynb_checkpoints/
-
-# stagev3 OS / editor
-/stagev3/**/.DS_Store
-/stagev3/**/Thumbs.db
-/stagev3/**/.vscode/
-/stagev3/**/.idea/
+# Keep GitHub-facing completed reports visible.
+!/stagev5/output/final_report/
+!/stagev5/output/final_report/*.md
+!/stagev5/output/final_report/*.csv
+!/stagev5/output/final_report/*.json
+!/stagev5/output/final_report/figures/
+!/stagev5/output/final_report/figures/*.png
+!/stagev5/notebooks/stagev5_result_check.ipynb

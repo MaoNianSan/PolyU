@@ -1,0 +1,7 @@
+{
+  "best_external_accuracy_model": "early_middle__svc__poly3",
+  "best_mechanism_consistent_model": "mlp_svc_late_calibrated__lr__l2",
+  "final_recommended_model": "early_middle__svc__poly3",
+  "selection_metric": "external_accuracy",
+  "recommendation_rule": "Selected the model with highest held-out external accuracy; ties are resolved by balanced accuracy, sensitivity, specificity, F1, ROC-AUC, and PR-AUC."
+}

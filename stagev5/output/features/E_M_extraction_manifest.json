@@ -1,0 +1,44 @@
+{
+  "source_project": "stagev2.zip",
+  "early_source_function": "src.stagev1_features.generate_all_early_features",
+  "middle_source_function": "src.api_feature_extraction.run_middle_embeddings",
+  "early_feature_version": "early_v5_mild_sensitive",
+  "middle_window_policy": "stagev2 exact: 15 words, stride 5, bge-m3",
+  "reference_middle_cache_used": true,
+  "early_manifest": {
+    "feature_family": "early_bm25",
+    "feature_version": "early_v5_mild_sensitive",
+    "input_dir": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\input\\raw",
+    "preprocess_dir": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\preprocess",
+    "historical_outputs_reused": false,
+    "ad_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\early_bm25\\early_v5_mild_sensitive\\ad_BM25.csv",
+    "ad_n_rows": 87,
+    "ad_n_cols": 76,
+    "control_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\early_bm25\\early_v5_mild_sensitive\\control_BM25.csv",
+    "control_n_rows": 79,
+    "control_n_cols": 76,
+    "test_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\early_bm25\\early_v5_mild_sensitive\\test_BM25.csv",
+    "test_n_rows": 71,
+    "test_n_cols": 76
+  },
+  "middle_manifest": {
+    "model": "bge-m3",
+    "base_url": "https://api.modelarts-maas.com/v1",
+    "new_cache_rows": 0,
+    "datasets": {
+      "ad": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\embedding\\ad_embedding.csv",
+        "rows": 1635
+      },
+      "control": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\embedding\\control_embedding.csv",
+        "rows": 1818
+      },
+      "test": {
+        "output_path": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\feature_extraction\\stagev2_exact\\features\\embedding\\test_embedding.csv",
+        "rows": 1386
+      }
+    }
+  },
+  "created_at": "2026-06-21T07:32:51.185388+00:00"
+}

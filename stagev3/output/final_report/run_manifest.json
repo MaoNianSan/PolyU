@@ -1,18 +1,15 @@
 {
   "project": "stagev3",
-  "created_at": "2026-06-13T03:05:12.947651+00:00",
-  "run_mode": "selected_after_seed2026",
-  "cv_mode": "fast",
+  "created_at": "2026-06-15T14:34:48.393681+00:00",
+  "run_mode": "seed2026",
+  "cv_mode": "exact",
   "validation_level": "standard",
   "main_seed": 2026,
-  "stability_seeds": [
-    0,
-    1
-  ],
+  "stability_seeds": [],
   "n_model_specs_per_early_variant": 102,
   "n_expected_main_rows": 204,
-  "n_expected_stability_rows": 408,
-  "raw_data_source": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev3_fixed\\input\\raw",
+  "n_expected_stability_rows": 0,
+  "raw_data_source": "D:\\research\\H.L.Liang-Lab\\Code\\Github\\stagev3\\input\\raw",
   "api_mode": "real_api",
   "local_surrogate_allowed": false,
   "v2_compatible_fixes": {

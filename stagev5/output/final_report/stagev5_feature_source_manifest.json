@@ -1,0 +1,453 @@
+{
+  "stage_version": "stagev5",
+  "E": {
+    "source": "stagev2.zip",
+    "implementation": "reference_stagev2/stagev1_features.py",
+    "feature_status": {
+      "n_E": 61,
+      "n_M": 1024,
+      "n_L": 8,
+      "expected_E": 61,
+      "actual_E": 61,
+      "expected_M": 1024,
+      "actual_M": 1024,
+      "expected_L_raw_F8": 8,
+      "actual_L_raw_F8": 8,
+      "late_raw_F8_columns": [
+        "late_sentence_structural_integrity",
+        "late_phrase_continuity",
+        "late_repetition_control",
+        "late_repair_efficiency",
+        "late_filler_control",
+        "late_referential_clarity",
+        "late_grammatical_stability",
+        "late_local_coherence"
+      ],
+      "late_auxiliary_columns": [],
+      "late_all_related_cols": [
+        "late_sentence_structural_integrity",
+        "late_phrase_continuity",
+        "late_repetition_control",
+        "late_repair_efficiency",
+        "late_filler_control",
+        "late_referential_clarity",
+        "late_grammatical_stability",
+        "late_local_coherence"
+      ],
+      "late_model_feature_count": 8,
+      "late_diagnostic_column_count": 0,
+      "late_auxiliary_used_in_model": false,
+      "late_auxiliary_columns_consistent": true,
+      "late_split_summaries": [
+        {
+          "name": "ad_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        },
+        {
+          "name": "control_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        },
+        {
+          "name": "test_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        }
+      ],
+      "late_activation_policy": "raw_F8_mean",
+      "paths": {
+        "E": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\ad_BM25.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\control_BM25.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\test_BM25.csv"
+        ],
+        "M": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\ad_embedding.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\control_embedding.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\test_embedding.csv"
+        ],
+        "L": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\ad_LLM.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\control_LLM.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\test_LLM.csv"
+        ]
+      }
+    }
+  },
+  "M": {
+    "source": "stagev2.zip",
+    "implementation": "reference_stagev2/api_feature_extraction.py",
+    "feature_status": {
+      "n_E": 61,
+      "n_M": 1024,
+      "n_L": 8,
+      "expected_E": 61,
+      "actual_E": 61,
+      "expected_M": 1024,
+      "actual_M": 1024,
+      "expected_L_raw_F8": 8,
+      "actual_L_raw_F8": 8,
+      "late_raw_F8_columns": [
+        "late_sentence_structural_integrity",
+        "late_phrase_continuity",
+        "late_repetition_control",
+        "late_repair_efficiency",
+        "late_filler_control",
+        "late_referential_clarity",
+        "late_grammatical_stability",
+        "late_local_coherence"
+      ],
+      "late_auxiliary_columns": [],
+      "late_all_related_cols": [
+        "late_sentence_structural_integrity",
+        "late_phrase_continuity",
+        "late_repetition_control",
+        "late_repair_efficiency",
+        "late_filler_control",
+        "late_referential_clarity",
+        "late_grammatical_stability",
+        "late_local_coherence"
+      ],
+      "late_model_feature_count": 8,
+      "late_diagnostic_column_count": 0,
+      "late_auxiliary_used_in_model": false,
+      "late_auxiliary_columns_consistent": true,
+      "late_split_summaries": [
+        {
+          "name": "ad_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        },
+        {
+          "name": "control_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        },
+        {
+          "name": "test_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        }
+      ],
+      "late_activation_policy": "raw_F8_mean",
+      "paths": {
+        "E": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\ad_BM25.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\control_BM25.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\test_BM25.csv"
+        ],
+        "M": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\ad_embedding.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\control_embedding.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\test_embedding.csv"
+        ],
+        "L": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\ad_LLM.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\control_LLM.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\test_LLM.csv"
+        ]
+      }
+    }
+  },
+  "L": {
+    "source": "stagev4_unmasked_form_comparator.zip",
+    "implementation": "reference_stagev4/late_extract.py",
+    "feature_status": {
+      "n_E": 61,
+      "n_M": 1024,
+      "n_L": 8,
+      "expected_E": 61,
+      "actual_E": 61,
+      "expected_M": 1024,
+      "actual_M": 1024,
+      "expected_L_raw_F8": 8,
+      "actual_L_raw_F8": 8,
+      "late_raw_F8_columns": [
+        "late_sentence_structural_integrity",
+        "late_phrase_continuity",
+        "late_repetition_control",
+        "late_repair_efficiency",
+        "late_filler_control",
+        "late_referential_clarity",
+        "late_grammatical_stability",
+        "late_local_coherence"
+      ],
+      "late_auxiliary_columns": [],
+      "late_all_related_cols": [
+        "late_sentence_structural_integrity",
+        "late_phrase_continuity",
+        "late_repetition_control",
+        "late_repair_efficiency",
+        "late_filler_control",
+        "late_referential_clarity",
+        "late_grammatical_stability",
+        "late_local_coherence"
+      ],
+      "late_model_feature_count": 8,
+      "late_diagnostic_column_count": 0,
+      "late_auxiliary_used_in_model": false,
+      "late_auxiliary_columns_consistent": true,
+      "late_split_summaries": [
+        {
+          "name": "ad_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        },
+        {
+          "name": "control_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        },
+        {
+          "name": "test_LLM.csv",
+          "late_all_related_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_raw_f8_cols": [
+            "late_sentence_structural_integrity",
+            "late_phrase_continuity",
+            "late_repetition_control",
+            "late_repair_efficiency",
+            "late_filler_control",
+            "late_referential_clarity",
+            "late_grammatical_stability",
+            "late_local_coherence"
+          ],
+          "late_auxiliary_cols": [],
+          "late_model_feature_count": 8,
+          "late_diagnostic_column_count": 0,
+          "late_auxiliary_used_in_model": false,
+          "late_activation_policy": "raw_F8_mean"
+        }
+      ],
+      "late_activation_policy": "raw_F8_mean",
+      "paths": {
+        "E": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\ad_BM25.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\control_BM25.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\E\\raw_stagev2\\test_BM25.csv"
+        ],
+        "M": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\ad_embedding.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\control_embedding.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\M\\raw_stagev2\\test_embedding.csv"
+        ],
+        "L": [
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\ad_LLM.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\control_LLM.csv",
+          "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev5\\output\\features\\L\\raw_stagev4\\test_LLM.csv"
+        ]
+      }
+    },
+    "late_raw_f8_columns": [
+      "late_sentence_structural_integrity",
+      "late_phrase_continuity",
+      "late_repetition_control",
+      "late_repair_efficiency",
+      "late_filler_control",
+      "late_referential_clarity",
+      "late_grammatical_stability",
+      "late_local_coherence"
+    ],
+    "late_auxiliary_columns": [],
+    "late_model_feature_count": 8,
+    "late_diagnostic_column_count": 0,
+    "late_auxiliary_used_in_model": false,
+    "late_activation_policy": "raw_F8_mean"
+  },
+  "classification_core": "stagev2/stage_core with CV count configured to 10x1 through environment variables",
+  "selection_metric": "external_accuracy",
+  "external_set_role": "held-out external validation; not used for model fitting or preprocessing fit"
+}

@@ -1,0 +1,10 @@
+{
+  "package": "stagev5",
+  "feature_contract": {
+    "E": "stagev2",
+    "M": "stagev2",
+    "L": "stagev4_unmasked"
+  },
+  "classifier_contract": "stagev2 classifier core, CV 10x1",
+  "created_by": "OpenAI"
+}

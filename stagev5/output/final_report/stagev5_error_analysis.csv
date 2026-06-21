@@ -1,0 +1,12 @@
+sample_id,y_true,label_disease,label_early,label_middle,label_late,label_normal,label_mild,label_moderate,label_severe,severity_group,mmse,model_name,y_pred,p_ad,correct,error_type,s_E,s_M,s_L,s_E_M,s_M_L,s_E_M_L,p_MLP,p_SVC,p_MLP_L,p_SVC_L
+TEST_0041,1,1,1,0,0,0,1,0,0,early,23,early_middle__svc__poly3,0,0.0356616541651129,0,FN_early,,,,,,,,,,
+TEST_0017,1,1,0,1,0,0,0,1,0,middle,16,early_middle__svc__poly3,0,0.1223868250801555,0,FN_middle,,,,,,,,,,
+TEST_0062,0,0,0,0,0,1,0,0,0,control,29,early_middle__svc__poly3,1,0.71783623693785,0,FP_normal,,,,,,,,,,
+TEST_0060,0,0,0,0,0,1,0,0,0,control,28,early_middle__svc__poly3,1,0.7468132056231289,0,FP_normal,,,,,,,,,,
+TEST_0037,0,0,0,0,0,1,0,0,0,control,27,early_middle__svc__poly3,1,0.8381678499992673,0,FP_normal,,,,,,,,,,
+TEST_0022,0,0,0,0,0,1,0,0,0,control,30,early_middle__svc__poly3,1,0.8679919209674956,0,FP_normal,,,,,,,,,,
+TEST_0027,0,0,0,0,0,1,0,0,0,control,28,early_middle__svc__poly3,1,0.9478251872812162,0,FP_normal,,,,,,,,,,
+TEST_0058,0,0,0,0,0,1,0,0,0,control,28,early_middle__svc__poly3,1,0.95316165613903,0,FP_normal,,,,,,,,,,
+TEST_0069,0,0,0,0,0,1,0,0,0,control,29,early_middle__svc__poly3,1,0.9761556433828348,0,FP_normal,,,,,,,,,,
+TEST_0030,0,0,0,0,0,1,0,0,0,control,27,early_middle__svc__poly3,1,0.978730811316095,0,FP_normal,,,,,,,,,,
+TEST_0024,0,0,0,0,0,1,0,0,0,control,29,early_middle__svc__poly3,1,0.9828097773830368,0,FP_normal,,,,,,,,,,

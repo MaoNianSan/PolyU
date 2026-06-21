@@ -150,7 +150,7 @@ class RunProgress:
                     "12. Current selected model index: "
                     f"`{self.data.get('current_selected_model_index', 0)}`"
                 ),
-                f"13. Parallel jobs: `{self.data.get('n_jobs')}`",
+                f"13. Automatic workers: `{self.data.get('worker_count', 0)}`",
                 f"14. Resume enabled: `{self.data.get('resume')}`",
                 f"15. Force rerun: `{self.data.get('force_rerun')}`",
                 f"16. Checkpoint directory: `{self.data.get('checkpoint_dir')}`",
