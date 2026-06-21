@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "created_at": "2026-06-21T11:16:14.760813+00:00",
+  "n_train": 166,
+  "n_external": 71,
+  "feature_counts": {
+    "E": 61,
+    "M": 1024,
+    "L": 8
+  },
+  "train_original_stage_counts": {
+    "control": 79,
+    "middle": 50,
+    "late": 16,
+    "early": 13,
+    "AD_high_MMSE": 8
+  },
+  "external_original_stage_counts": {
+    "control": 36,
+    "middle": 14,
+    "AD_high_MMSE": 8,
+    "late": 7,
+    "early": 6
+  },
+  "no_api_or_feature_extraction": true,
+  "feature_files": {
+    "ad": {
+      "E_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\E\\raw_stagev2\\ad_BM25.csv",
+      "M_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\M\\raw_stagev2\\ad_embedding.csv",
+      "L_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\L\\raw_stagev4\\ad_LLM.csv",
+      "n": 87
+    },
+    "control": {
+      "E_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\E\\raw_stagev2\\control_BM25.csv",
+      "M_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\M\\raw_stagev2\\control_embedding.csv",
+      "L_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\L\\raw_stagev4\\control_LLM.csv",
+      "n": 79
+    },
+    "test": {
+      "E_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\E\\raw_stagev2\\test_BM25.csv",
+      "M_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\M\\raw_stagev2\\test_embedding.csv",
+      "L_file": "D:\\research\\H.L.Liang-Lab\\Code\\expore\\stagev7\\output\\features\\L\\raw_stagev4\\test_LLM.csv",
+      "n": 71
+    }
+  }
+}

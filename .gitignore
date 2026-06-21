@@ -51,12 +51,15 @@
 /stagev5/output/run_external_accuracy_selection/tmp/
 /stagev5/output/stagev5/models/
 /stagev5/output/stagev5/tmp/
-tage
+
 /stagev6/output/run_cascade_external_accuracy_selection/
 /stagev6/output/final_report/*.csv
 /stagev6/output/final_report/*.json
 /stagev6/output/final_report/*.md
 /stagev6/output/final_report/figures/*.png
+
+/stagev7/output/stagev7_models/
+/stagev7/output/final_report/stagev7_*
 
 # Keep GitHub-facing completed reports visible.
 !/stagev5/output/final_report/
