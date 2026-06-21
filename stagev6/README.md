@@ -1,77 +1,83 @@
-# stagev6
+# stagev6 — late-first cascade classifier
 
-`stagev6` is a late-first cascade for Cookie Theft AD-versus-control classification.
+## Objective
 
-## Locked inputs
+Stagev6 is a conditional two-level AD classifier using **only the already-generated strict stagev5 feature files**:
 
-Stagev6 **does not extract any features and does not call an API**. It reads the existing Stagev5 artifacts directly:
+1. **Late gate:** classify `late` versus `non-late`.
+2. **Hard route:** samples predicted late are directly assigned AD.
+3. **Non-late branch:** samples not predicted late receive an `AD versus control` decision.
 
-| Family | Existing source artifact | Stagev6 use |
-|---|---|---|
-| E | `output/features/E/raw_stagev2/` | Non-late AD/control branch only |
-| M | `output/features/M/raw_stagev2/` | Gate and branch; BGE-M3 window rows are aggregated by `sample_id` mean |
-| L | `output/features/L/raw_stagev4/` | Late gate only; strict raw P4/F8 columns |
+The project is not a parallel early/middle/late/control multiclass model. Each component is binary.
 
-The loader verifies feature dimensions, sample IDs, fixed mutually exclusive stage labels, and expected Stagev5 sample counts before training.
+## Fixed model panel
 
-## Model structure
+The final model panel contains the Cartesian product of three gates and two branches: **6 cascade models**.
 
-\[
-\text{Late gate} \rightarrow
-\begin{cases}
-\text{gate-positive} \Rightarrow \text{AD}\\
-\text{gate-negative} \Rightarrow \text{non-late AD/control branch}
-\end{cases}
-\]
+| ID | Component | Feature block | Classifier | Grid score |
+|---|---|---|---|---|
+| G1 | late gate | L | L2 logistic regression | balanced accuracy |
+| G2 | late gate | M+L | L2 logistic regression | balanced accuracy |
+| G3 | late gate | M+L | polynomial SVC, degree 3 | balanced accuracy |
+| B1 | non-late branch | E+M | polynomial SVC, degree 3 | accuracy |
+| B2 | non-late branch | E+M | L2 logistic regression | accuracy |
 
-- Gate target: `late` versus `non-late`.
-- Gate feature blocks: `L` and `M+L`.
-- Branch population: only true non-late training samples (`control`, `early`, `middle`, and `AD_high_MMSE`).
-- Branch feature block: `E+M`.
-- A gate-positive sample is directly labelled AD.
-- Gate/branch thresholds are both fixed at 0.50.
-- Hard routing determines accuracy, sensitivity, specificity, F1, MCC, and the confusion matrix.
-- \(p_{AD}=p_{late}+(1-p_{late})p_{AD\mid nonlate}\) is retained only for ROC-AUC, PR-AUC, Brier score, and log-loss.
+The six specifications are complete cascades. Shared gate/branch components are fitted once and then recombined, preventing redundant training without altering any final prediction.
 
-## Stagev5-scale classifier family
+## Inherited feature policy
 
-The gate uses the Stagev5 LR/SVC family on both valid gate blocks:
+- **E:** stagev2 early BM25 features, 61 dimensions.
+- **M:** stagev2 BGE-M3 embedding features, 1,024 dimensions after mean aggregation by `sample_id`.
+- **L:** stagev4 unmasked P4/F8 features, 8 raw dimensions only.
+- No API request, feature extraction, cache update, or MMSE input is performed in `train` mode.
 
-- LR-L2, LR-L1, LR-elastic-net;
-- linear SVC, polynomial SVC degree 2, polynomial SVC degree 3, RBF SVC, sigmoid SVC.
+The exact inherited source manifests are retained under `output/features/`.
 
-The branch uses the same LR/SVC family on `E+M` plus the Stagev5 small MLP anchor. This creates 16 gate components × 9 branch components = **144 cascade candidates**, without redundant refitting of the same components for every pair.
+## Training and evaluation
 
-Component tuning uses the Stagev5 grids and `GridSearchCV` with repeated stratified 10-fold CV configured as 10×1. Gate tuning uses balanced accuracy because its positive class has only 16 training samples; branch tuning uses accuracy. Complete cascades are ranked by held-out **external test accuracy** (`external_test_accuracy`), matching Stagev5’s selection convention while making the split explicit in the outputs.
+- Component hyperparameters: `GridSearchCV`.
+- Gate selection scoring: balanced accuracy.
+- Branch selection scoring: accuracy.
+- Cascade OOF diagnostics: shared 10-fold stratified splits over `control`, `nonlate_AD`, and `late_AD`.
+- External metrics and bootstrap confidence intervals: hard late-first routing; continuous probability metrics use `p_ad_mixture`.
+- Final ranking: external accuracy, matching the stagev5 reporting convention.
 
-## Install
+The external set remains excluded from feature construction, imputation fitting, scaling fitting, and classifier fitting. It is not an unbiased final test once it is used for model ranking.
 
-```powershell
-cd stagev6
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
-## Run
+## Run on Windows PowerShell
 
 ```powershell
+cd D:\research\H.L.Liang-Lab\Code\expore\stagev6
 python .\run_stagev6.py --mode self_check
 python .\run_stagev6.py --mode train --n-jobs 12 --bootstrap-n 200
 ```
 
-`--mode train` uses the prepackaged Stagev5 feature CSVs. It does not perform feature extraction, use an API key, or alter the original E/M/L files.
+`--mode train` reuses the included stagev5 feature CSVs directly. To replace prior Stagev6 outputs explicitly:
 
-## Canonical outputs
+```powershell
+python .\run_stagev6.py --mode train --n-jobs 12 --bootstrap-n 200 --overwrite
+```
 
-After training, `output/final_report/` contains the Stagev6 model ranking by external test accuracy, external test performance report, CV summary, bootstrap CIs, route-aware OOF/external-test predictions, gate and branch component reports, route diagnostics, selected-model summary/report, feature-source audit, leakage audit, and seven pre-rendered PNG figures.
-
-The notebook only reads saved outputs:
+To execute the read-only audit notebook after training:
 
 ```powershell
 python .\run_stagev6.py --mode render_notebook
 ```
 
-## Interpretation boundary
+## Main output files
 
-The routing output is `control`, `non-late AD`, or `late-direct AD`. Stagev6 is not a supervised early/middle/late multiclass classifier.
+All canonical result files are written to `output/final_report/`:
+
+- `stagev6_model_ranking_by_external_accuracy.csv`
+- `stagev6_external_performance_report.csv`
+- `stagev6_cv_summary.csv`
+- `stagev6_bootstrap_ci.csv`
+- `stagev6_test_predictions_all_models.csv`
+- `stagev6_late_gate_performance.csv`
+- `stagev6_nonlate_branch_performance.csv`
+- `stagev6_route_diagnostics.csv`
+- `stagev6_component_specifications.csv`
+- `stagev6_selected_model_summary.md`
+- `stagev6_experiment_report.md`
+
+`stagev6_test_predictions_all_models.csv` contains `p_late`, `late_route`, `p_ad_given_nonlate`, `p_ad_mixture`, `final_route`, `y_pred`, and `route_error_type` for every external sample and every cascade model.

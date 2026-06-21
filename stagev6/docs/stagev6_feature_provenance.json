@@ -1,7 +1,0 @@
-{
-  "stagev6_feature_inputs": "Copied directly from stagev5.zip generated E/M/L feature directories.",
-  "early": "stagev2 implementation definitions as materialized in stagev5 output/features/E/raw_stagev2",
-  "middle": "stagev2 implementation definitions as materialized in stagev5 output/features/M/raw_stagev2; sample means are recomputed by loader",
-  "late": "stagev4 unmasked P4/F8 outputs as materialized in stagev5 output/features/L/raw_stagev4",
-  "model_policy": "Stagev5 classifier family/grid scale adapted to a late-first cascade architecture."
-}
