@@ -1,0 +1,32 @@
+{
+  "upstream_repository": "https://github.com/MaoNianSan/PolyU",
+  "source_snapshot": "Stagev5 feature source copied unchanged; Stagev8.5 MMSE-ordinal severity code retained separately; no historical E/M/L feature or cache artifacts bundled.",
+  "files": {
+    "assets/stagev5_exact/raw_hashes.json": "52ffdb7ea46eb54761f451c451676526a9c99d2bb456c81bb1cbfded331e3b5e",
+    "assets/stagev5_exact/src/feature_adapter.py": "f98c8228c89943f735fb50a4b676fb009726739226909596b84e745b580332eb",
+    "assets/stagev5_exact/src/paths.py": "7542685f4b29fdc449aa024593a227a5e69b50c9a05eac8ba03069e306dfc93b",
+    "assets/stagev5_exact/src/stagev5_config.py": "d39103d7881969219bc6aec852dc8b3a5f180aeacbc9d8ec66b865996b86edc8",
+    "assets/stagev6_contract_reference/data_loader.py": "a8f04304e94083d1c9407200d5e73a43f9de0be06b215ef51bdd0e966683ed29",
+    "assets/stagev5_exact/src/reference_stagev2/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "assets/stagev5_exact/src/reference_stagev2/api_feature_extraction.py": "780eeaca6ed9d128c6e323fb173ba156035e6cba2a2d596eb7003ca6909ad309",
+    "assets/stagev5_exact/src/reference_stagev2/bm25_extractor.py": "b326f837aa859f338aa0c60e1179d1ca60ec909e797d6cc2b09df1b0c9dd6885",
+    "assets/stagev5_exact/src/reference_stagev2/bm25_units.py": "1297b86cfd77e06ea8b8b996656e41d28b364a7c9f2cce6f9b4e22b1fdd8a449",
+    "assets/stagev5_exact/src/reference_stagev2/config.py": "017bbbad8925a2fb42d2ffbef90cfd2fc33dca2612fb3837b2880ddae89709e0",
+    "assets/stagev5_exact/src/reference_stagev2/data_source.py": "c57b8e3661bee4155cd320e896ce015829465dd7667ab7a6bf96c7d7bb4c40a9",
+    "assets/stagev5_exact/src/reference_stagev2/early_features.py": "24f8b5ca30584c831a3e23eeec50f375f58cf3b2f82a61e5eb3ad9d461826123",
+    "assets/stagev5_exact/src/reference_stagev2/feature_extraction.py": "f76e79add5c7896cb638bb20e706e84a662cce03993fc2e7e661b09dd2aad321",
+    "assets/stagev5_exact/src/reference_stagev2/preprocess.py": "6f483749b5bf88c6f06d460f7adbe78bd04dc6cc23c53f7b76b82f2ea9652493",
+    "assets/stagev5_exact/src/reference_stagev2/stagev1_features.py": "840710d06e9e9f7f7e4ef687065567ab6ade8474a58a8889ad7cba6ee3206690",
+    "assets/stagev5_exact/src/reference_stagev4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "assets/stagev5_exact/src/reference_stagev4/api_client.py": "b21f2443349b71978420db13f9f3be60589a23fa30ab190c1537a46399248ec6",
+    "assets/stagev5_exact/src/reference_stagev4/config.py": "e8a2f2a32f307db1541afaabb777cf0c2344908a7a083d420ff024b0b13b9fa2",
+    "assets/stagev5_exact/src/reference_stagev4/data.py": "52d17a8df4ac4eaba918c13bdcbb71e5f54c3270e42de3e50de13431fe234679",
+    "assets/stagev5_exact/src/reference_stagev4/late_extract.py": "58b411deada99d109a943d506fa23914f8735c7bb58225ef69e8da19ff9cf9a0",
+    "assets/stagev5_exact/src/reference_stagev4/late_mask.py": "b95d8e49831a4619c1fcd7484ae43d3c21d594147f0be9c4b262968f0e17f9ee",
+    "assets/stagev5_exact/src/reference_stagev4/late_prompt.py": "5d1f0c760f181d45df25677bcad94cfd034a0c5f5e53340016a75938076b2dbd",
+    "assets/stagev5_exact/configs/reference_stagev4/scientific_protocol.json": "8c8291e306d492cda85aeace47b370f7b50c61c83ba38d4365679a2d698e605c",
+    "assets/stagev5_exact/configs/reference_stagev4/stage_label_protocol.json": "eb6535e947cbcee2c6ba98f2e7588ac2b23f3112ada45e5a9155d7f8ee86be81",
+    "assets/stagev5_anchor/selected__early_middle__svc__poly3.joblib": "d6d5022e27087afd46c5ced7e3651c0fe97a4cb14e84fa7823a3f6f06cef1c52",
+    "assets/stagev5_anchor/stagev5_run_config.json": "a98b39ac309b88ac6177a05fb7f87e6a451ef9be87457a89f8757c0f323d67fe"
+  }
+}

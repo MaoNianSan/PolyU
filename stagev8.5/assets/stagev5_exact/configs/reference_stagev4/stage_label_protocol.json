@@ -1,0 +1,7 @@
+{
+  "label_name": "MMSE-stratified severity category; not a pathological disease stage.",
+  "early": "AD label=1 and MMSE >= 21",
+  "middle": "AD label=1 and 13 <= MMSE <= 20",
+  "late": "AD label=1 and MMSE <= 12",
+  "missing_mmse": "Included in AD-vs-control only; excluded from auxiliary severity analysis."
+}

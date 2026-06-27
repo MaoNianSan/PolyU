@@ -1,0 +1,31 @@
+{
+  "package": "stagev8_5_global_fresh_rerun_with_audit_notebook",
+  "project_name": "Stagev8.5",
+  "input_policy": "raw_csv_only",
+  "feature_policy": "fresh API reconstruction via copied hash-locked Stagev5/Stagev4 feature source; no historical feature or cache replay",
+  "model_policy": "frozen Stagev5 AD/control anchor plus prespecified Stagev8.5 MMSE-informed ordinal severity heads",
+  "severity_label_contract": {
+    "high_mmse_AD": "MMSE >=21",
+    "intermediate_mmse_AD": "MMSE 15-20",
+    "low_mmse_AD": "MMSE <=14"
+  },
+  "expected_feature_dims": {
+    "E": 61,
+    "M": 1024,
+    "L": 8
+  },
+  "transport_contract": {
+    "runtime_override": "curl.exe / Windows Schannel only",
+    "reference_stagev5_stagev4_files_modified": false,
+    "feature_protocol_modified": false,
+    "request_body": "prepared from original json payload dictionaries",
+    "direct_connection": true,
+    "certificate_verification": true
+  },
+  "version_status": "clean_full_rerun_distribution",
+  "completed_result_artifacts_included": false,
+  "version_normalization_recomputed_features_or_models": false,
+  "read_only_notebook": "notebooks/stagev8_5_result_audit.ipynb",
+  "global_rerun_mode": "python .\\run_stagev8.py --mode global_rerun --n-jobs 12 --bootstrap-n 200 --stability-seeds 0-29",
+  "global_rerun_contract": "force-clears generated Stagev8.5 outputs, performs fresh E/M/L API reconstruction, verifies the frozen anchor, trains the ordinal severity model, and renders the notebook"
+}
